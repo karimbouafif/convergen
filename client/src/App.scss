@@ -1,0 +1,405 @@
+// Global
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    font-size: 1rem;
+    background-color: #eee;
+    color: #333;
+  }
+  
+  .copyright {
+    text-align: center;
+    color: #eee;
+  }
+  
+  // Navbar
+  
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  
+  // Landing
+  
+  .landing {
+    height: 100vh;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #0079bf, #5067c5);
+  
+    .top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px;
+    }
+  
+    .landing-inner {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding: 150px 50px;
+    }
+  
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+  
+      a {
+        text-decoration: none;
+        color: lightgrey;
+        transition: 0.3s;
+        &:hover {
+          color: darkgrey;
+        }
+      }
+    }
+  
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+  }
+  
+  // Dashboard
+  
+  .dashboard-and-navbar {
+    .navbar {
+      background-color: #026aa7;
+    }
+  }
+  
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+  
+    h1 {
+      text-align: center;
+      font-weight: 500;
+    }
+  
+    h2 {
+      margin-top: 40px;
+      font-weight: 400;
+    }
+  
+    .dashboard-loading {
+      margin: 40px;
+    }
+  
+    .boards {
+      margin: 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .board-card {
+      width: 220px;
+      height: 120px;
+      padding: 20px 50px 20px 20px;
+      margin: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      color: white;
+      border-radius: 10px;
+      background-color: #5067c5;
+      &:hover {
+        background-color: #4057b5;
+      }
+    }
+  
+    .create-board-card {
+      padding: 0;
+      border: none;
+      color: #333;
+      font-size: 1rem;
+      background-color: lightgrey;
+      &:hover {
+        background-color: darkgrey;
+      }
+      cursor: pointer;
+    }
+  }
+  
+  // Board
+  
+  .board-and-navbar {
+    background-size: cover;
+    height: 100vh;
+  
+    .navbar {
+      background-color: rgba(50, 50, 50, 0.4);
+    }
+  }
+  
+  .board-loading {
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  .board {
+    padding: 10px;
+  
+    .board-top {
+      padding: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+  
+      .board-top-left {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        @media (max-width: 960px) {
+          flex-direction: column;
+        }
+  
+        .board-title {
+          cursor: pointer;
+          color: snow;
+          padding: 5px 0 0 5px;
+          max-width: 500px;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+  
+        .board-title-form {
+          background-color: snow;
+        }
+  
+        .board-members-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 20px;
+          @media (max-width: 960px) {
+            margin: 20px 20px 20px 0;
+          }
+  
+          .board-members {
+            display: flex;
+            flex-wrap: wrap;
+          }
+        }
+  
+        .invite {
+          margin-left: 10px;
+          display: flex;
+          flex-wrap: wrap;
+  
+          .search-member {
+            width: 250px;
+            margin-right: 10px;
+            height: 2.5rem;
+          }
+        }
+      }
+    }
+  
+    .avatar {
+      margin-right: 2px;
+      color: darkslategrey;
+      cursor: default;
+      background-color: #eee;
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  
+    .create-list-button {
+      margin-top: 10px;
+      min-width: 200px;
+    }
+  
+    .create-list-form {
+      min-width: 280px;
+      padding: 0 10px 10px;
+      margin-top: 10px;
+      height: fit-content;
+      background-color: #eee;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .archived-card {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .lists {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      @media (min-height: 600px) and (min-width: 1000px) {
+        min-height: 83vh;
+      }
+      @media (min-height: 960px) {
+        min-height: 88vh;
+      }
+  
+      .list-wrapper {
+        background-color: #eee;
+        border-radius: 5px;
+        min-width: 280px;
+        max-width: 280px;
+        height: fit-content;
+        margin-top: 10px;
+        margin-right: 10px;
+        padding: 10px;
+  
+        .list-top {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+  
+          .list-title {
+            cursor: pointer;
+            padding: 5px 0 0 5px;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+        }
+  
+        .create-card-button {
+          margin-top: 5px;
+        }
+  
+        .create-card-form {
+          margin-top: 5px;
+          display: flex;
+          flex-direction: column;
+        }
+  
+        .card-edit-content {
+          padding-top: 0;
+          padding-bottom: 5px;
+        }
+  
+        .card-actions {
+          margin-bottom: 5px;
+        }
+  
+        .not-adding-card {
+          max-height: 64vh;
+          @media (min-height: 960px) {
+            max-height: 75vh;
+          }
+        }
+  
+        .adding-card {
+          max-height: 69vh;
+          @media (min-height: 960px) {
+            max-height: 80vh;
+          }
+        }
+  
+        .list {
+          min-height: 1px;
+          overflow-y: auto;
+  
+          .cards {
+            display: flex;
+            flex-direction: column;
+            margin-right: 2px;
+  
+            .card {
+              margin: 5px 0;
+              position: relative;
+              cursor: pointer;
+  
+              .card-label {
+                height: 9px;
+                width: 45px;
+                border-radius: 5px;
+                margin-bottom: 5px;
+              }
+  
+              .description-indicator {
+                margin: 3px 5px -5px -3px;
+              }
+  
+              .checklist-indicator {
+                display: flex;
+                align-items: center;
+                padding: 1px 5px 0 4px;
+                height: 25px;
+                margin: auto;
+  
+                .checklist-indicator-icon {
+                  margin-right: 2px;
+                }
+              }
+  
+              .completed-checklist-indicator {
+                background-color: #00b800;
+                border-radius: 5px;
+                color: snow;
+              }
+  
+              .card-bottom {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: 3px;
+                margin-bottom: -5px;
+  
+                .card-bottom-left {
+                  display: flex;
+                }
+  
+                .card-member-avatars {
+                  display: flex;
+                  flex-wrap: wrap;
+  
+                  .avatar {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 0.8rem;
+                    background-color: #ddd;
+                    &:hover {
+                      background-color: #ccc;
+                    }
+                  }
+                }
+              }
+            }
+  
+            .mouse-over {
+              background-color: whitesmoke;
+            }
+          }
+        }
+      }
+    }
+  }
+  
