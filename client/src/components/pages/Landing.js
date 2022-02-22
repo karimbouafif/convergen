@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Button } from '@material-ui/core';
 import { Redirect } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import image from "../../images/convergen.png"; 
 const Landing = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
@@ -31,6 +32,7 @@ const Landing = () => {
       <div className='landing-inner'>
         <h1>Convergen</h1>
         <p>
+       
           Visit  <a href='https://convergen.io/'>Convergen</a>
         </p>
         <div className='buttons'>

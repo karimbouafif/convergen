@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '20px',
     background: 'linear-gradient(135deg, #3c5b9b, #3f4372)',
   },
-  paper: {
+  paper: { 
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
