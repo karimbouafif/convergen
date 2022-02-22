@@ -5,3 +5,10 @@ A convergen ToDO Task built using the MERN stack
 
 ## :heart: Getting Started
 
+<ol>
+<li>Run Convergen App node server </li>
+<li>Install missing dependencies:</li>
+ <code> npm start </code>
+<li>change MONGO_URI in /server/config/keys.js
+<li>Run the app</li>
+</ol>
