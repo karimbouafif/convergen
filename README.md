@@ -8,7 +8,9 @@ A convergen ToDO Task built using the MERN stack
 <ol>
 <li>Run Convergen App node server </li>
 <li>Install missing dependencies:</li>
- <code> npm start </code>
+ <code> npm install </code>
+ <li> run the App:</li>
+ <code> npm start  </code>
 <li>change MONGO_URI in /server/config/keys.js
 <li>Run the app</li>
 </ol>
